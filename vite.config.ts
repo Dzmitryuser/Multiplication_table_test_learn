@@ -10,5 +10,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/Multiplication-table/',
+  base: '/Multiplication_table_test_learn/',
 })
