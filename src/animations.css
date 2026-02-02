@@ -1,0 +1,128 @@
+/* Анимации для плавных переходов */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes progressFill {
+  from { width: 0%; }
+  to { width: var(--progress-width); }
+}
+
+/* Классы для анимаций */
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.slide-in {
+  animation: slideIn 0.6s ease-out;
+}
+
+.scale-in {
+  animation: scaleIn 0.4s ease-out;
+}
+
+.bounce {
+  animation: bounce 0.8s ease-out;
+}
+
+.pulse {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.progress-bar {
+  animation: progressFill 0.8s ease-out;
+}
+
+/* Переходы для кнопок */
+.button-transition {
+  transition: all 0.3s ease;
+}
+
+.button-transition:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button-transition:active {
+  transform: scale(0.98);
+  transition: all 0.1s ease;
+}
+
+/* Переходы для карточек */
+.card-transition {
+  transition: all 0.3s ease;
+}
+
+.card-transition:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Анимация для обратной связи */
+.feedback-enter {
+  animation: scaleIn 0.4s ease-out;
+}
+
+.feedback-success {
+  animation: bounce 0.6s ease-out;
+}
+
+.feedback-error {
+  animation: shake 0.5s ease-out;
+}
+
+/* Анимация для смены вопросов */
+.question-transition {
+  transition: all 0.4s ease-in-out;
+}
+
+/* Анимация для таймера */
+.timer-warning {
+  animation: pulse 0.5s ease-in-out infinite;
+  color: #ff6b6b !important;
+}
+
+/* Анимация для результатов */
+.result-item {
+  animation: fadeIn 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.result-item:nth-child(1) { animation-delay: 0.1s; }
+.result-item:nth-child(2) { animation-delay: 0.2s; }
+.result-item:nth-child(3) { animation-delay: 0.3s; }
+.result-item:nth-child(4) { animation-delay: 0.4s; }
+.result-item:nth-child(5) { animation-delay: 0.5s; }
